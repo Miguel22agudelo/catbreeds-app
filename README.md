@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+# 🐱 Catbreeds App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Prueba técnica para desarrollador móvil en React Native. Esta aplicación permite explorar distintas razas de gatos utilizando la API pública de [TheCatAPI](https://thecatapi.com/), mostrando información clave como origen, inteligencia, adaptabilidad y esperanza de vida.
 
-## Get started
+## 🚀 Características
 
-1. Install dependencies
+- ✅ Consumo de API con autenticación mediante API Key.
+- ✅ Estructura basada en **Atomic Design**.
+- ✅ Navegación con `@react-navigation/native`.
+- ✅ Tipado completo con **TypeScript**.
+- ✅ Splash Screen animado con navegación automática.
+- ✅ Pantallas:
+  - `SplashScreen`: Logo + transición automática.
+  - `LandingScreen`: Listado de razas con filtro.
+  - `DetailScreen`: Detalle completo de cada raza.
 
-   ```bash
-   npm install
-   ```
+## 📂 Estructura del proyecto
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+src/
+├── assets/          # Imágenes y recursos
+├── components/      # Atomic Design (atoms, molecules, organisms)
+├── constants/       # Colores, strings, tamaños
+├── hooks/           # Hooks personalizados
+├── navigation/      # Stack de navegación
+├── screens/         # Splash, Landing y Detail
+└── services/        # Llamado a la API
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🛠️ Tecnologías utilizadas
 
-## Learn more
+- [Expo](https://expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Navigation](https://reactnavigation.org/)
+- [TheCatAPI](https://thecatapi.com/)
 
-To learn more about developing your project with Expo, look at the following resources:
+## ▶️ Cómo correr el proyecto
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. Clona el repositorio:
 
-## Join the community
+```bash
+git clone https://github.com/Miguel22agudelo/catbreeds-app.git
+cd catbreeds-app
+```
 
-Join our community of developers creating universal apps.
+2. Instala dependencias:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+yarn install
+```
+
+3. Ejecuta el proyecto:
+
+```bash
+yarn start
+```
+
+4. Escanea el QR en tu celular con Expo Go o ejecuta en emulador.
+
+## 📸 Capturas (opcional)
+
+_¡Aquí puedes agregar screenshots si el tiempo lo permite!_
+
+## 📝 Notas
+
+- La clave API está protegida y se pasa por headers de forma segura.
+- El proyecto está optimizado para móviles (Android/iOS).
+- Pensado bajo principios de escalabilidad y legibilidad.
+
+## 🧑‍💻 Autor
+
+Desarrollado por [Miguel Ángel Agudelo](https://github.com/Miguel22agudelo) como parte del proceso técnico para Pragma.
