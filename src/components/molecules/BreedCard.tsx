@@ -8,15 +8,15 @@ interface Props {
 
 const BreedCard = ({ breed, onPress }: Props) => {
     return (
-        <TouchableOpacity onPress={onPress} style={styles.card}>
+        <TouchableOpacity onPress={onPress} style={styles.card} activeOpacity={0.8}>
             {breed.image?.url && (
                 <Image source={{ uri: breed.image.url }} style={styles.image} />
             )}
             <View style={styles.info}>
                 <Text style={styles.name}>{breed.name}</Text>
-                <Text style={styles.text}>Origen: {breed.origin}</Text>
-                <Text style={styles.text}>Inteligencia: {breed.intelligence}</Text>
-                <Text style={styles.more}>Más...</Text>
+                <Text style={styles.text}>🌍 Origen: {breed.origin}</Text>
+                <Text style={styles.text}>🧠 Inteligencia: {breed.intelligence}</Text>
+                <Text style={styles.more}>Ver más</Text>
             </View>
         </TouchableOpacity>
     );
@@ -24,32 +24,43 @@ const BreedCard = ({ breed, onPress }: Props) => {
 
 const styles = StyleSheet.create({
     card: {
-        flexDirection: 'row',
-        backgroundColor: '#fafafa',
-        margin: 10,
-        borderRadius: 12,
-        elevation: 3,
+        width: '90%',
+        alignSelf: 'center',
+        backgroundColor: '#ffffff',
+        borderRadius: 16,
         overflow: 'hidden',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 6,
+        elevation: 4,
+        marginBottom: 16,
     },
     image: {
-        width: 100,
-        height: 100,
+        width: '100%',
+        aspectRatio: 3 / 2,
+        borderTopLeftRadius: 16,
+        borderTopRightRadius: 16,
+        resizeMode: 'cover',
     },
     info: {
-        flex: 1,
-        padding: 10,
+        padding: 12,
+        backgroundColor: '#fff',
     },
     name: {
-        fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: 18,
+        fontWeight: '600',
+        marginBottom: 8,
     },
     text: {
         fontSize: 14,
+        marginBottom: 2,
+        color: '#555',
     },
     more: {
-        marginTop: 5,
-        color: '#0088cc',
+        marginTop: 10,
         fontWeight: 'bold',
+        color: '#0077cc',
     },
 });
 

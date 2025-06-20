@@ -1,20 +1,33 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
+import React, { useLayoutEffect } from 'react';
+import { StyleSheet, View } from 'react-native';
+import BreedDetail from '../../components/organisms/BreedDetail';
+import { RootStackParamList } from '../../navigation/NavigationStack';
 
-const DetailScreen = () => (
-    <View style={styles.container}>
-        <Text style={styles.text}>Pantalla de Detalle 😺</Text>
-    </View>
-);
+type DetailScreenRouteProp = RouteProp<RootStackParamList, 'Detail'>;
+
+const DetailScreen = () => {
+    const { params } = useRoute<DetailScreenRouteProp>();
+    const { breed } = params;
+    const navigation = useNavigation();
+
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            title: breed.name,
+        });
+    }, [navigation, breed.name]);
+
+    return (
+        <View style={styles.container}>
+            <BreedDetail breed={breed} />
+        </View>
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    text: {
-        fontSize: 24,
+        backgroundColor: '#fff',
     },
 });
 

@@ -4,8 +4,6 @@ import { useCatBreedsPaginated } from '../../hooks/useCatBreedsPaginated';
 import BreedCard from '../molecules/BreedCard';
 import SearchInput from '../molecules/SearchInput';
 
-const ITEM_HEIGHT = 120;
-
 const BreedList = ({ onPress }: { onPress: (breed: any) => void }) => {
     const { breeds, loading, fetchMore } = useCatBreedsPaginated();
     const [search, setSearch] = useState('');
@@ -36,11 +34,6 @@ const BreedList = ({ onPress }: { onPress: (breed: any) => void }) => {
                 initialNumToRender={10}
                 maxToRenderPerBatch={5}
                 windowSize={10}
-                getItemLayout={(_, index) => ({
-                    length: ITEM_HEIGHT,
-                    offset: ITEM_HEIGHT * index,
-                    index,
-                })}
             />
             {!loading && filteredBreeds.length === 0 && (
                 <Text style={styles.noResults}>No results found</Text>
