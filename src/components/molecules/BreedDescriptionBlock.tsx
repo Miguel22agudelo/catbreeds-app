@@ -20,10 +20,10 @@ const BreedDescriptionBlock = ({
     return (
         <View style={styles.container}>
             <Text style={styles.description}>{description}</Text>
-            <DetailItem label="🌍 Origen" value={origin} />
-            <DetailItem label="🧠 Inteligencia" value={intelligence} />
-            <DetailItem label="🌀 Adaptabilidad" value={adaptability} />
-            <DetailItem label="⏳ Tiempo de vida" value={`${lifeSpan} years`} />
+            <DetailItem label="🌍 Origin" value={origin} />
+            <DetailItem label="🧠 Intelligence" value={intelligence} />
+            <DetailItem label="🌀 Adaptability" value={adaptability} />
+            <DetailItem label="⏳ Lifespan" value={`${lifeSpan} years`} />
         </View>
     );
 };
