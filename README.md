@@ -58,7 +58,7 @@ yarn start
 
 4. Escanea el QR en tu celular con Expo Go o ejecuta en emulador.
 
-## 📸 Capturas (opcional)
+<!-- ## 📸 Capturas (opcional) -->
 
 
 
